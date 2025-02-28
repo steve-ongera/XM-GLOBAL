@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - XM Trading Platform{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Dashboard content here -->
+<div class="account-overview-section">
+    <div class="section-header">
+        <h2 class="section-title">Accounts Overview</h2>
+        <p class="section-subtitle">Stay informed and manage your account with ease VIA the Account Overview.</p>
+    </div>
+    
+    <div class="account-tabs">
+        <div class="tab-item active">Real</div>
+        <div class="tab-item">Demo</div>
+    </div>
+    
+    <div class="account-cards-container">
+        <!-- Account card example -->
+        <div class="account-card">
+            <div class="account-card-header">
+                <span class="account-type-badge">Demo</span>
+                <span class="account-platform">MT5</span>
+            </div>
+            <div class="account-id">313134465</div>
+            <div class="account-balance">$ 10,000.69</div>
+            <div class="account-actions">
+                <button class="set-balance-btn">
+                    <i class="fas fa-cog"></i>
+                    <span>Set Balance</span>
+                </button>
+                <button class="action-button">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- New account card -->
+        <div class="new-account-card">
+            <div class="new-account-icon">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="new-account-text">Open Additional Account</div>
+        </div>
+    </div>
+    
+    <div class="cards-navigation">
+        <button class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+
+<!-- Rest of the dashboard sections -->
+{% endblock %}
