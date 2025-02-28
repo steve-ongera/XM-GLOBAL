@@ -42,7 +42,7 @@
                             <option value="Uganda">Uganda</option>
                             <!-- Add more countries as needed -->
                         </select>
-                        <span class="dropdown-arrow">▼</span>
+                        <span class="dropdown-arrow"></span>
                     </div>
                 </div>
                 
@@ -81,12 +81,25 @@
         </div>
     </div>
 
+
+
     <script>
         document.querySelector('.toggle-password').addEventListener('click', function() {
             const passwordInput = document.getElementById('password');
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
         });
     </script>
+
+    
 </body>
 </html>
