@@ -35,6 +35,7 @@ AUTH_USER_MODEL = 'base.CustomUser'
 # Authentication backends
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
+    'base.backends.EmailBackend',  # Custom Email Backend
 ]
 
 # Login URL
