@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XM - Registration</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/xm-logo.svg'%}">
     <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,10 +15,10 @@
         <div class="form-container">
             <div class="header">
                 <div class="logo">
-                    <img src="{% static 'images/xm-logo.png' %}" alt="XM Logo">
+                    <img src="{% static 'images/xm-logo.svg' %}" alt="XM Logo">
                 </div>
                 <div class="language-selector">
-                    <img src="{% static 'images/uk-flag.png' %}" alt="English" class="flag">
+                    <img src="{% static 'images/gb.png' %}" alt="English" class="flag">
                     <span>English</span>
                     <span class="dropdown-arrow">▼</span>
                 </div>
@@ -28,7 +30,7 @@
                 Already have an account? <a href="{% url 'login' %}">Login</a>
             </div>
             
-            <form method="post" action="{% url 'register' %}">
+            <form method="post" action="{% url 'signup' %}">
                 {% csrf_token %}
                 
                 <div class="form-group">
@@ -54,7 +56,7 @@
                     <div class="password-input-wrapper">
                         <input type="password" id="password" name="password" required>
                         <button type="button" class="toggle-password">
-                            <img src="{% static 'images/eye-icon.png' %}" alt="Show/Hide Password">
+                            <i class="fas fa-eye"></i>
                         </button>
                     </div>
                 </div>
