@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/xm-logo.svg'%}">
+    <title>{% block title %}XM Trading Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="{% static 'images/xm-logo.svg' %}" alt="XM Logo">
+            </div>
+            <div class="balance-info">
+                <span class="balance-label">Balance</span>
+                <span class="balance-amount">USD 10,000.69</span>
+                <span class="account-id">(313134465)</span>
+                <span class="account-type">Demo</span>
+                <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="header-btn"><i class="fas fa-th"></i></button>
+            <button class="header-btn"><i class="fas fa-user"></i></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-wallet"></i>
+                            <span>My Accounts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy Trading</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Competitions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Market Intelligence</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Live Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <span>More</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="bottom-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy Trading</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Competitions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Market Intelligence</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Live Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item dropdown">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <span>More</span>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Vulnerability Policy</a>
+            <a href="#">Terms and Conditions</a>
+        </div>
+        <div class="footer-social">
+            <span>Follow us:</span>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-legal">
+            <p class="legal-text">
+                <span class="legal-label">Legal:</span> This website is operated by XM Global Limited with registered address at Suite 101, 63 Eve Street, Belize City, Belize.
+            </p>
+            <p class="legal-text">
+                XM Global Limited, registered by the Financial Services Commission (FSC) under the Securities Industry Act 2021 (license number 000261/27) and Trading Point of Financial Instruments Limited, authorized and regulated by Cyprus Securities and Exchange Commission (CySEC license number 120/10), are members of Trading Point Group.
+            </p>
+            <p class="legal-text risk-warning">
+                <span class="warning-label">Risk Warning:</span> Our services involve a significant risk and can result in the loss of your invested capital. Please read and ensure you fully understand our <a href="#">Risk Disclosure</a>.
+            </p>
+            <p class="legal-text restricted-regions">
+                <span class="warning-label">Restricted Regions:</span> XM Global Limited does not provide services for the residents of certain countries, such as the United States of America, Canada, Israel and the Islamic Republic of Iran.
+            </p>
+            <p class="legal-text">
+                XM does not direct its website and services to any individual in any country in which the use of its website and services are prohibited by local laws or regulations. When accessing this website from a country in which its use may or may not be prohibited, it is the user's responsibility to ensure that any use of the website or services adhere to local laws or regulations. XM does not affirm that the information on its website is suitable to all jurisdictions.
+            </p>
+            <p class="legal-text risk-warning">
+                <span class="warning-label">Risk Warning:</span> Your capital is at risk. Leveraged products may not be suitable for everyone. Please consider our <a href="#">Risk Disclosure</a>.
+                <button class="close-warning"><i class="fas fa-times"></i></button>
+            </p>
+        </div>
+    </footer>
+
+    
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
